@@ -7,6 +7,7 @@ def test_request_main_menu_links(client):
     assert b'<li><a class="button" href="/page/about">About</a></li>' in response.data
     assert b'<li><a class="button" href="/page/welcome">Welcome</a></li>' in response.data
 
+
 def test_request_about(client):
     """This makes the index page"""
     response = client.get("/page/about")
